@@ -1,0 +1,83 @@
+[
+    {
+      "username": "wanderlust_joe",
+      "image": "https://source.unsplash.com/random/800x600?travel&sig=1",
+      "caption": "Golden hour at Santorini 💙",
+      "timestamp": "2024-10-15T18:42:00Z",
+      "likes": 25,
+      "shares": 7
+    },
+    {
+      "username": "travel_guru",
+      "image": "https://source.unsplash.com/random/800x600?city&sig=2",
+      "caption": "Exploring the hidden alleys of Venice 🛶",
+      "timestamp": "2024-11-05T14:30:00Z",
+      "likes": 40,
+      "shares": 10
+    },
+    {
+      "username": "nomad_nina",
+      "image": "https://source.unsplash.com/random/800x600?mountain&sig=3",
+      "caption": "Chasing the clouds in the Himalayas 🏔️",
+      "timestamp": "2025-01-22T09:15:00Z",
+      "likes": 18,
+      "shares": 3
+    },
+    {
+      "username": "city_explorer",
+      "image": "https://source.unsplash.com/random/800x600?architecture&sig=4",
+      "caption": "Modern marvels in Dubai 🏙️",
+      "timestamp": "2025-03-12T16:45:00Z",
+      "likes": 33,
+      "shares": 5
+    },
+    {
+      "username": "adventure_alex",
+      "image": "https://source.unsplash.com/random/800x600?jungle&sig=5",
+      "caption": "Into the wild 🌿",
+      "timestamp": "2025-02-28T12:10:00Z",
+      "likes": 12,
+      "shares": 1
+    },
+    {
+      "username": "globe_trotter",
+      "image": "https://source.unsplash.com/random/800x600?beach&sig=6",
+      "caption": "Beach days and palm trees 🏖️",
+      "timestamp": "2025-05-03T11:00:00Z",
+      "likes": 56,
+      "shares": 14
+    },
+    {
+      "username": "nature_nerd",
+      "image": "https://source.unsplash.com/random/800x600?forest&sig=7",
+      "caption": "Deep in the Amazon 🌳",
+      "timestamp": "2025-04-14T07:20:00Z",
+      "likes": 22,
+      "shares": 6
+    },
+    {
+      "username": "urban_roamer",
+      "image": "https://source.unsplash.com/random/800x600?nightlife&sig=8",
+      "caption": "City lights and late nights ✨",
+      "timestamp": "2024-12-25T21:55:00Z",
+      "likes": 48,
+      "shares": 11
+    },
+    {
+      "username": "backpacker_ben",
+      "image": "https://source.unsplash.com/random/800x600?trail&sig=9",
+      "caption": "One trail at a time 🥾",
+      "timestamp": "2025-03-30T10:12:00Z",
+      "likes": 30,
+      "shares": 8
+    },
+    {
+      "username": "cultural_carla",
+      "image": "https://source.unsplash.com/random/800x600?temple&sig=10",
+      "caption": "Exploring the history of Kyoto 🏯",
+      "timestamp": "2025-01-05T17:25:00Z",
+      "likes": 36,
+      "shares": 4
+    }
+  ]
+  

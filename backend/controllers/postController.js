@@ -56,12 +56,13 @@ const likePost = async (req, res) => {
       }
   
       const { caption } = req.body;
-      const image = req.file.path;
+    //   const image = req.file.path;
+    const imageUrl = req.file.path || req.file.secure_url; 
   
       const newPost = new Post({
         username: "anonymous",
         caption,
-        image,
+        imageUrl,
         timestamp: new Date(),
         likes: 0,
         shares: 0,

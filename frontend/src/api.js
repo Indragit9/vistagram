@@ -1,8 +1,12 @@
 import axios from "axios";
 
+// const API = axios.create({
+//   baseURL: "http://localhost:5000/api",
+// });
+
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
-});
+    baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api",
+  });
 
 // Attach token to every request if present
 API.interceptors.request.use((req) => {

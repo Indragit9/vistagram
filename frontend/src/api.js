@@ -11,6 +11,7 @@ const API = axios.create({
     baseURL: process.env.REACT_APP_API_BASE_URL || "https://vistagram-cgf0.onrender.com/api"
   });
 
+console.log("API Base URL:", API.defaults.baseURL);  
 // Attach token to every request if present
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem("token");

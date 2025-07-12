@@ -17,21 +17,14 @@ const app = express();
 //     ],
 //     credentials: true,
 //   }));
-// app.use(
-// 	cors({
-// 		origin: "*",
-// 		credentials: true,
-// 	})
-// );
-app.use(cors({
-    origin: "*", // or list of allowed domains
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true
-  }));
+app.use(
+	cors({
+		origin: "*",
+		credentials: true,
+	})
+);
+
   
-  // Handle preflight requests
-  app.options("*", cors());
 
 app.use(express.json()); // for parsing JSON
 app.use(express.urlencoded({ extended: true })); // for form data

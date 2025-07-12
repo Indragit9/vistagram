@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const authRoutes = require("./routes/auth");
 
 const postRoutes = require("./routes/postRoutes");
 
@@ -14,6 +15,9 @@ app.use(express.urlencoded({ extended: true })); // for form data
 
 // Mount routes
 app.use("/api/posts", postRoutes);
+
+app.use("/api/auth", authRoutes);
+
 
 // DB connection
 mongoose.connect(process.env.MONGO_URI)

@@ -17,12 +17,10 @@ const app = express();
 //     ],
 //     credentials: true,
 //   }));
-app.use(
-	cors({
-		origin: "*",
-		credentials: true,
-	})
-);
+app.use(cors({
+  origin: "https://vistagram-indrajeets-projects-ea91e7ed.vercel.app/", // Replace with your actual frontend URL
+  credentials: true
+}));
 
   
 

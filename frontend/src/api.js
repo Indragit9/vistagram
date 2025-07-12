@@ -4,8 +4,11 @@ import axios from "axios";
 //   baseURL: "http://localhost:5000/api",
 // });
 
+// const API = axios.create({
+//     baseURL: "https://vistagram-cgf0.onrender.com/api"
+//   });
 const API = axios.create({
-    baseURL: "https://vistagram-cgf0.onrender.com/api"
+    baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:5000/api"
   });
 
 // Attach token to every request if present

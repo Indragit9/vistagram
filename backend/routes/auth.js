@@ -66,7 +66,7 @@ const router = express.Router();
 //   }
 // });
 
-router.post("/signup", async (req, res) => {
+router.post("https://vistagram-cgf0.onrender.com/api/signup", async (req, res) => {
     const { username, password } = req.body;
   
     try {
@@ -84,7 +84,7 @@ router.post("/signup", async (req, res) => {
   });
   
 // Login
-router.post("/login", async (req, res) => {
+router.post("https://vistagram-cgf0.onrender.com/api/login", async (req, res) => {
   const { username, password } = req.body;
 
   try {

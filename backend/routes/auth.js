@@ -48,24 +48,41 @@ const User = require("../models/User");
 const router = express.Router();
 
 // Signup
+// router.post("/signup", async (req, res) => {
+//   const { username, password } = req.body;
+
+//   try {
+//     const exists = await User.findOne({ username });
+//     if (exists) return res.status(400).json({ message: "User already exists." });
+
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const user = new User({ username, password: hashedPassword });
+//     await user.save();
+
+//     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+//     res.status(201).json({ token, username });
+//   } catch (err) {
+//     res.status(500).json({ message: "Signup failed", error: err.message });
+//   }
+// });
+
 router.post("/signup", async (req, res) => {
-  const { username, password } = req.body;
-
-  try {
-    const exists = await User.findOne({ username });
-    if (exists) return res.status(400).json({ message: "User already exists." });
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPassword });
-    await user.save();
-
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
-    res.status(201).json({ token, username });
-  } catch (err) {
-    res.status(500).json({ message: "Signup failed", error: err.message });
-  }
-});
-
+    const { username, password } = req.body;
+  
+    try {
+      const exists = await User.findOne({ username });
+      if (exists) return res.status(400).json({ message: "User already exists." });
+  
+      const user = new User({ username, password }); // ✅ let model handle hashing
+      await user.save();
+  
+      const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+      res.status(201).json({ token, username });
+    } catch (err) {
+      res.status(500).json({ message: "Signup failed", error: err.message });
+    }
+  });
+  
 // Login
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
@@ -74,7 +91,8 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ username });
     if (!user) return res.status(400).json({ message: "Invalid credentials." });
 
-    const isMatch = await user.comparePassword(password);
+    const isMatch = await bcrypt.compare(password, user.password);
+
     if (!isMatch) return res.status(400).json({ message: "Invalid credentials." });
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
